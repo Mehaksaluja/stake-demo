@@ -166,6 +166,10 @@
     box-shadow: 0 0 20px rgba(0, 231, 0, 0.3);
   }
 
+  .shadow-red-500\/50 {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+  }
+
   /* Custom ring animations */
   .animate-ring-rotate {
     animation: ring-rotate 3s ease-in-out infinite;

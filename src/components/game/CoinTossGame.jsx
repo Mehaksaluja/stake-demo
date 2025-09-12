@@ -38,10 +38,12 @@ const CoinTossGame = ({ setView }) => {
       const coinFlipResult = randomValue < 0.5 ? 'heads' : 'tails';
       
       setResult(coinFlipResult);
-      setHistory(prev => [coinFlipResult, ...prev.slice(0, 19)]);
       
       // Check if player won
       const won = coinFlipResult === selectedSide;
+      const historyResult = won ? 'W' : 'L';
+      setHistory(prev => [historyResult, ...prev.slice(0, 19)]);
+      
       if (won) {
         const winAmount = betAmount * multiplier;
         setBalance(prev => prev + winAmount);

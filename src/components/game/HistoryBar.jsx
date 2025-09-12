@@ -10,9 +10,9 @@ const HistoryBar = ({ history }) => {
       </div>
       <div className="flex space-x-2 overflow-x-auto pb-2">
         {history.map((result, i) => (
-          <div key={i} className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-200 ${!result ? 'bg-stake-black border border-stake-border' : result === 'heads' ? 'bg-stake-heads-orange shadow-glow-orange' : 'bg-stake-black border-2 border-stake-blue shadow-glow-blue'}`}>
-            {result === 'heads' && <span className="text-white font-bold text-sm">H</span>}
-            {result === 'tails' && <StakeCoinIcon className="w-5 h-5 text-stake-blue" />}
+          <div key={i} className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-200 ${!result ? 'bg-stake-black border border-stake-border' : result === 'W' ? 'bg-green-500 shadow-glow-green' : 'bg-red-500 shadow-red-500/50'}`}>
+            {result === 'W' && <span className="text-white font-bold text-sm">W</span>}
+            {result === 'L' && <span className="text-white font-bold text-sm">L</span>}
             {!result && <div className="w-3 h-3 rounded-full bg-stake-text-muted"></div>}
           </div>
         ))}
